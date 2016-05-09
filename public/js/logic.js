@@ -11,27 +11,27 @@
     window.videos = {
 
             "lol" : {
-                "text": "this is the lol text",
+                "text": "we're going to be together forever",
                 "path": "80213525"},
 
             "23sec": {
-                "text": "23 sec text",
+                "text": "i don't want to upset him",
                 "path": "81457879"
             },
             "hacked" : {
-                "text": "hacked text",
+                "text": "lol i don't remember a thing",
                 "path": "81520380"
             },
             "selfie" : {
-                    "text": "selfie text",
+                    "text": "we just need to be good to each other",
                     "path": "82058356"
                 },
             "conor" : {
-                    "text": "did conor cheat on u",
+                    "text": "i can't believe this shit",
                     "path": "81400274"
                 },
             "dead" : {
-                    "text": "your dead",
+                    "text": "they won't let me in : (",
                     "path": "80194872"}
         };
 
