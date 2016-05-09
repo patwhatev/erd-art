@@ -33,8 +33,7 @@ h1,h2,h3,h4,h5,a,p {
 	text-align: center;
 }
 
-h5.base-text {
-
+.base-text {
 }
 
 .frame {
@@ -49,6 +48,9 @@ h5.base-text {
 	font-weight: lighter;
 	text-align: center;
 	font-style: italic;
+	max-width: 650px;
+	margin: auto auto;
+
 }
 
 /*iframe {

@@ -36,7 +36,7 @@
         };
 
     window.texts = {
-        'one' : ["Revolving around the anxiety of creating a new identity, why7not is a personal introspection into the fabrication of our personal biographies. Starting at a granular level of online profile creation, and eventually scoping to macro details about the framing of our self-image and the way the public views am individual.The pieces aim to blur the lines between a fixed personality and a fluid and editable mode of expressing oneself, while at the same time capturing the anxiety of the vast freedom in being the author of your social presence."],
+        'one' : "why7not is a personal introspection into the fabrication of our personal autobiographies. <br><br><br> the anxiety of the vast freedom in being the author of your social graces",
         'two' : [],
         'three' : [],
      }
