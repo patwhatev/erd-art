@@ -8,7 +8,7 @@
     var $selfie = $('.selfie');
     var $conor = $('.conor');
     var $dead = $('.dead');
-    var $videos = {
+    window.videos = {
 
             "base" : {
                 "text": "this is the base text",
@@ -40,8 +40,12 @@
         };
 
     $document.ready(function() {
-            //PROJECT RENDERER, DO NOT ALTER
-        function render(video) { // a key
+        
+        
+
+
+        //PROJECT RENDERER, DO NOT ALTER
+        window.render = function(video) { // a key
             $('.text-frame').html(video.text); //put the response on the dom
             var iframePrefix = '<iframe class="vimeo" src="https://player.vimeo.com/video/';
             var iframeSuffix = '?autoplay=0" frameborder="0"></iframe>';
@@ -50,12 +54,12 @@
             $('#content-zone .video-frame').html(iframeHtml); //put the response on the dom
         }
 
-        render($videos['lol']);
+        // render(videos['lol']);
 
         //to swap out an image source, use
         function swapSrc(iframe, src) {
             $(iframe).attr('src', src);
         }
-     });
 
+     });
 })();
