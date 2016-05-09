@@ -54,7 +54,7 @@
         }
 
         //to swap out an image source, use
-        function swapSrc(img, src) {
+        function swapSrc(iframe, src) {
             $(iframe).attr('src', src);
         }
 
