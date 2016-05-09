@@ -33,6 +33,10 @@ h1,h2,h3,h4,h5,a,p {
 	text-align: center;
 }
 
+h5.base-text {
+
+}
+
 .frame {
 	border: white solid 3px;
 	z-index: 50;

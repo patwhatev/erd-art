@@ -35,6 +35,12 @@
                     "path": "80194872"}
         };
 
+    window.texts = {
+        'one' : ["Revolving around the anxiety of creating a new identity, why7not is a personal introspection into the fabrication of our personal biographies. Starting at a granular level of online profile creation, and eventually scoping to macro details about the framing of our self-image and the way the public views am individual.The pieces aim to blur the lines between a fixed personality and a fluid and editable mode of expressing oneself, while at the same time capturing the anxiety of the vast freedom in being the author of your social presence."],
+        'two' : [],
+        'three' : [],
+     }
+
     $document.ready(function() {
         
         //PROJECT RENDERER, DO NOT ALTER
@@ -46,6 +52,14 @@
             console.log(iframeHtml);
             $('#content-zone .video-frame').html(iframeHtml); //put the response on the dom
         }
+
+        window.displayText = function() {
+            $('#content-zone .video-frame').html('<img src="public/imgs/thumb.png"/>'); //empty footer area
+            $('.text-frame').html('<br><h1 class="base-text">'+texts['one']+'</h1>'); //put the response on the dom
+        }
+        
+        displayText();
+
 
      });
 })();
