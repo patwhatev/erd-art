@@ -4,6 +4,11 @@ body {
 
 header {
 	text-align: center;
+	margin-top: 20px;
+}
+
+.nav {
+	padding: 10px;
 }
 
 ul {
@@ -14,11 +19,14 @@ ul {
 
 li {
 	display: inline;
-	padding: 0 10px;
+	padding: 10px;
 }
 
-h5 {
+h1,h2,h3,h4,h5,a,p {
 	display: inline;
+	font-family: helvetica;
+	font-weight: lighter;
+	font-size: 13px;
 }
 
 #content-zone {
@@ -29,6 +37,14 @@ h5 {
 	border: white solid 3px;
 	z-index: 50;
 	position: relative;
+}
+
+.text-frame{
+	font-size: 11px;
+	font-family: helvetica;
+	font-weight: lighter;
+	text-align: center;
+	font-style: italic;
 }
 
 /*iframe {
