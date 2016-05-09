@@ -60,37 +60,37 @@
 
         $base.click(function(e) {
             console.log('render queued');
-            render(videos['base']);         
+            render('base');         
          });
 
         $lol.click(function(e) {
             console.log('render queued');
-            render(videos['lol']);         
+            render('lol');         
          });
 
         $hacked.click(function(e) {
             console.log('render queued');
-            render(videos['hacked']);         
+            render('hacked');         
          });
 
         $23sec.click(function(e) {
             console.log('render queued');
-            render(videos['23sec']);         
+            render('23sec');         
          });
 
         $selfie.click(function(e) {
             console.log('render queued');
-            render(videos['selfie']);         
+            render('selfie');         
          });
 
         $conor.click(function(e) {
             console.log('render queued');
-            render(videos['conor']);         
+            render('conor');         
          });
 
         $dead.click(function(e) {
             console.log('render queued');
-            render(videos['dead']);         
+            render('dead');         
          });
     
 
