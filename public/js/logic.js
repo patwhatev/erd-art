@@ -36,7 +36,7 @@
         };
 
     window.texts = {
-        'one' : "why7not is a personal introspection into the fabrication of our personal autobiographies. <br><br><br> the anxiety of the vast freedom in being the author of your social graces",
+        'one' : " the anxiety of the vast freedom in being the author of your social graces",
         'two' : [],
         'three' : [],
      }
