@@ -1,0 +1,43 @@
+body {
+	background-color: #fff;
+}
+
+header {
+	text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+	display: inline;
+	padding: 0 10px;
+}
+
+h5 {
+	display: inline;
+}
+
+#content-zone {
+	text-align: center;
+}
+
+.frame {
+	border: white solid 3px;
+	z-index: 50;
+	position: relative;
+}
+
+/*iframe {
+	margin-top: -5px;
+	margin-bottom: -10px;
+	z-index: 0;
+}*/
+
+.video-frame{width:838px; height:459px; overflow:hidden; margin:0 auto;} .vimeoFrame .vimeoXtra {margin-top:-100px;}
+
+.vimeo {display:block; width:838px; height:838px; margin-top: -190px;}
+
