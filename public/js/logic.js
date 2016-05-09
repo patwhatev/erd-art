@@ -8,10 +8,7 @@
     var $selfie = $('.selfie');
     var $conor = $('.conor');
     var $dead = $('.dead');
-
-    $document.ready(function() {
-        
-        var videos = {
+    var $videos = {
 
             "base" : {
                 "text": "this is the base text",
@@ -42,8 +39,8 @@
                     "path": "80194872"}
         };
 
-
-        //PROJECT RENDERER, DO NOT ALTER
+    $document.ready(function() {
+            //PROJECT RENDERER, DO NOT ALTER
         function render(video) { // a key
             $('.text-frame').html(video.text); //put the response on the dom
             var iframePrefix = '<iframe class="vimeo" src="https://player.vimeo.com/video/';
@@ -53,46 +50,12 @@
             $('#content-zone .video-frame').html(iframeHtml); //put the response on the dom
         }
 
+        render($videos['lol']);
+
         //to swap out an image source, use
         function swapSrc(iframe, src) {
             $(iframe).attr('src', src);
         }
-
-        $base.click(function(e) {
-            console.log('render queued');
-            render('base');         
-         });
-
-        $lol.click(function(e) {
-            console.log('render queued');
-            render('lol');         
-         });
-
-        $hacked.click(function(e) {
-            console.log('render queued');
-            render('hacked');         
-         });
-
-        $23sec.click(function(e) {
-            console.log('render queued');
-            render('23sec');         
-         });
-
-        $selfie.click(function(e) {
-            console.log('render queued');
-            render('selfie');         
-         });
-
-        $conor.click(function(e) {
-            console.log('render queued');
-            render('conor');         
-         });
-
-        $dead.click(function(e) {
-            console.log('render queued');
-            render('dead');         
-         });
-    
-
      });
+
 })();
