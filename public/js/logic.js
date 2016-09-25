@@ -130,7 +130,7 @@
         }
 
         window.displayText = function() {
-            $('#content-zone .image-frame').html('<img src="public/Images/rightThigh/deteriorating bugs, regret in japanese.JPG"/>'); //empty footer area
+            $('#content-zone').html('<img class="image top" src="public/Images/rightThigh/deteriorating bugs, regret in japanese.JPG"/>'); //empty footer area
         }
         
         displayText();
