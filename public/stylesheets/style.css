@@ -38,21 +38,22 @@ h1,h2,h3,h4,h5,a,p {
 	text-align: center;
 }
 
-.base-text {
-}
-
 //the number of items in the list will push down the margin
 //making a larger gap between pairs 
 .text{
 	font-size: 11px;
 	font-family: helvetica;
 	font-weight: lighter;
-	text-align: center;
 	font-style: italic;
+	top: 200px;
 	position: absolute;
-	margin-top: -300px;
-	margin-left: 250px;
 	max-width: 650px;
+}
+
+.textbox{
+	margin-left: 850px;
+	text-align: left;
+	margin-top: -300px;
 }
 
 
@@ -63,21 +64,21 @@ h1,h2,h3,h4,h5,a,p {
 	margin:0 auto;
 } 
 
-.imageFrame .imageXtra {margin-top:-100px;}
-
 .image {
 	display:block; 
-	position: relative; 
 	width:438px; 
+	margin: auto;
 	height:438px; 
-	float: center; 
-	margin-left: auto; 
-	margin-right: auto; 
 	margin-top: -200px;
 }
 
 .pair{
 	margin-top: 240px;
+	margin-bottom: 400px;
+	margin-left: auto; 
+	margin-right: auto; 
+	position: relative; 
+   	width: 100%;
 }
 
 .top{

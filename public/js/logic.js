@@ -113,7 +113,7 @@
                 for(x=0; x < brokenText.length; x++) {
                     textHtml += `<p class="text">${brokenText[x]} </p></br>`;
                 }
-                markup += (`<div class="pair">${imageHtml} ${textHtml} </div>`);
+                markup += (`<div class="pair">${imageHtml} <div class="textbox">${textHtml} </div> </div>`);
                 console.log(markup);
             }
             $('#content-zone').html(markup); //put the response on the dom
