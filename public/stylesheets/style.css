@@ -43,28 +43,43 @@ h1,h2,h3,h4,h5,a,p {
 
 .frame {
 	border: white solid 3px;
-	z-index: 50;
 	position: relative;
 }
 
-.text-frame{
+.text{
 	font-size: 11px;
 	font-family: helvetica;
 	font-weight: lighter;
 	text-align: center;
 	font-style: italic;
+	position: absolute;
+	margin-top: -300px;
+	margin-left: 250px;
 	max-width: 650px;
-	margin: auto auto;
-
 }
 
-/*image {
-	margin-top: -5px;
-	margin-bottom: -10px;
-	z-index: 0;
-}*/
 
-.image-frame{width:838px; height:459px; overflow:hidden; margin:0 auto;} .imageFrame .imageXtra {margin-top:-100px;}
 
-.image {display:block; width:838px; height:838px; margin-top: -190px;}
+.image-frame{
+	width:838px; 
+	height:459px; 
+	margin:0 auto;
+} 
+
+.imageFrame .imageXtra {margin-top:-100px;}
+
+.image {
+	display:block; 
+	position: relative; 
+	width:438px; 
+	height:438px; 
+	float: center; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: -200px;
+}
+
+.pair{
+	margin-top: 300px;
+}
 

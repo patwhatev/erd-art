@@ -2,6 +2,7 @@
     var $document = $(document);
     var KEYCODE_ESC = 27;
 
+    // image path arrays, name of dir is first index 
     window.paths = {
         "knees" : {
             "arr" : [
@@ -80,35 +81,56 @@
         }
     }
 
+    // default text
     window.texts = {
         'one' : "a catalog of most of the tattoos on my body",
         'two' : [],
         'three' : [],
      }
 
+    // create string for image paths
     window.stringPath = '';
 
     $document.ready(function() {
         //PROJECT RENDERER, DO NOT ALTER
+
+        // called when link is clicked 
         window.render = function(folderPath) { // a key
-            window.stringPath = window.paths[folderPath].arr[0];
-            for (i = 1; i < window.paths[folderPath].arr.length; i++) {
-                pushPaths(window.paths[folderPath].arr[i]);
+            var selectedFolder = window.paths[folderPath].arr;
+
+            // assign path for string
+            window.stringPath = selectedFolder[0];
+
+            let markup = ''
+
+            // iterate through filenames, convert to html, push to string
+            for (i = 1; i < selectedFolder.length; i++) {
+                var imageHtml = pushPaths(selectedFolder[i]);
+                
+                let textString = selectedFolder[i].toString().split('.')[0];
+                let brokenText = textString.split(',');
+                let textHtml = ''
+                for(x=0; x < brokenText.length; x++) {
+                    textHtml += `<p class="text">${brokenText[x]} </p></br>`;
+                }
+                markup += (`<div class="pair">${imageHtml} ${textHtml} </div>`);
+                console.log(markup);
             }
+            $('#content-zone').html(markup); //put the response on the dom
+            // $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
         }
 
+        // take each image, concat path
         window.pushPaths = function(img) {
                 var imagePrefix = '<img class="image" src="./public/Images/' + window.stringPath + '/';
                 var imageSuffix = '"></br>';
                 var imageHtml = imagePrefix + img + imageSuffix;
-                console.log(imageHtml);
-                $('#content-zone .image-frame').html(imageHtml); //put the response on the dom
-                $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
+
+                return imageHtml;
         }
 
         window.displayText = function() {
             $('#content-zone .image-frame').html('<img src="public/Images/rightThigh/deteriorating bugs, regret in japanese.JPG"/>'); //empty footer area
-            $('.text-frame').html('<br><h1 class="base-text">'+texts['one']+'</h1>'); //put the response on the dom
         }
         
         displayText();
