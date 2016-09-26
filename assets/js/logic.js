@@ -122,7 +122,7 @@
 
         // take each image, concat path
         window.pushPaths = function(img) {
-                var imagePrefix = '<img class="image" src="./public/Images/' + window.stringPath + '/';
+                var imagePrefix = '<img class="image" src="assets/Images/' + window.stringPath + '/';
                 var imageSuffix = '"></br>';
                 var imageHtml = imagePrefix + img + imageSuffix;
 
@@ -130,7 +130,7 @@
         }
 
         window.displayText = function() {
-            $('#content-zone').html('<img class="image top" src="public/Images/rightThigh/deteriorating bugs, regret in japanese.JPG"/>'); //empty footer area
+            $('#content-zone').html('<img class="image top" src="assets/Images/rightThigh/deteriorating bugs, regret in japanese.JPG"/>'); //empty footer area
         }
         
         displayText();
