@@ -23,8 +23,7 @@
             "arr" : [
                 "paper",
                 ["11.JPG",['example title' , '2017']],
-                ["13.JPG",['example title' , '2017']],
-                ["29.JPG",['example title' , '2017']],
+                ["10.JPG",['example title' , '2017']],
                 ["30.JPG",['example title' , '2017']],
                 ["32.JPG",['example title' , '2017']],
                 ["33.JPG",['example title' , '2017']],
@@ -32,7 +31,6 @@
                 ["35.JPG",['example title' , '2017']],
                 ["37.JPG",['example title' , '2017']],
                 ["40.JPG",['example title' , '2017']],
-                ["47.JPG",['example title' , '2017']]
             ]
         },
         "cloth" : {
@@ -42,7 +40,7 @@
             ]
         },
         "contact" : {
-            "text" : ""
+            "text" : "henry@example.com"
         }
     }
 
@@ -94,28 +92,10 @@
         // called when text links clicked
         window.renderText = function(folderPath) { // a key
 
-            // //get general arr of clicked category
-            // var selectedFolder = window.paths[folderPath].arr;
-
-            // // get name
-            // window.stringPath = selectedFolder[0];
-
-            // let markup = ''
-
-            // // iterate through arrays after title, index 0 = filename, 1 = caption string
-            // for (i = 1; i < selectedFolder.length; i++) {
-            //     //add filename
-            //     var imageHtml = pushPaths(selectedFolder[i][0]);
-            //     let textString = selectedFolder[i][1];
-            //     let brokenText = textString.split(',');
-            //     let title = brokenText[0];
-            //     let year = brokenText[1];
-            //     let textHtml = `<p class="textContent"><strong>${title}</strong><br> <i><${year}/i> </p></br>`;
-
-            //     markup += (`<div class="pair">${imageHtml} <div class="textbox">${textHtml} </div> </div>`);
-            // }
-            // $('#content-zone').html(markup); //put the response on the dom
-            // $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
+            var text = window.paths[folderPath].text;
+            let markup = ` <div class="renderedText"><h5>${text}</h5></div>`;
+            $('#content-zone').html(markup); //put the response on the dom
+            $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
         }
 
         // take each image, concat path

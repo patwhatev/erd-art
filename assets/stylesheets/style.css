@@ -29,14 +29,14 @@ a:hover{
 
 h1,h2,h3,h5,a,p {
 	display: inline;
-	font-family: helvetica;
+	font-family: "HelveticaNeue";
 	font-weight: lighter;
 	font-size: 11px;
 }
 
 h4{
 	display: inline;
-	font-family: helvetica;
+	font-family: "HelveticaNeue";
 	font-size: 11px;
 }
 
@@ -52,6 +52,8 @@ h4{
 
 .year{
 	margin-top: -20px;
+	color: grey;
+	font-size: 10x;
 }
 
 .textbox{
@@ -63,7 +65,9 @@ h4{
 	/*border: blue solid 1px;*/
 }
 
-
+.renderedText{
+	margin-top: 100px;
+}
 
 .image-frame{
 	width:838px; 
