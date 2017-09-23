@@ -7,44 +7,42 @@
         "paint" : {
             "arr" : [
                 "paint",
-                ["14.JPG",""],
-                ["17.JPG",""],
-                ["19.JPG",""],
-                ["21.JPG",""],
-                ["22.JPG",""],
-                ["23.JPG",""],
-                ["24.JPG",""],
-                ["25.JPG",""],
-                ["26.JPG",""],
-                ["29.JPG",""]
+                ["14.JPG",['example title' , '2017']],
+                ["17.JPG",['example title' , '2017']],
+                ["19.JPG",['example title' , '2017']],
+                ["21.JPG",['example title' , '2017']],
+                ["22.JPG",['example title' , '2017']],
+                ["23.JPG",['example title' , '2017']],
+                ["24.JPG",['example title' , '2017']],
+                ["25.JPG",['example title' , '2017']],
+                ["26.JPG",['example title' , '2017']],
+                ["29.JPG",['example title' , '2017']]
             ]
         },
         "paper" : {
             "arr" : [
                 "paper",
-                ["11.JPG",""],
-                ["13.JPG",""],
-                ["29.JPG",""],
-                ["30.JPG",""],
-                ["32.JPG",""],
-                ["33.JPG",""],
-                ["34.JPG",""],
-                ["35.JPG",""],
-                ["37.JPG",""],
-                ["40.JPG",""],
-                ["47.JPG",""]
+                ["11.JPG",['example title' , '2017']],
+                ["13.JPG",['example title' , '2017']],
+                ["29.JPG",['example title' , '2017']],
+                ["30.JPG",['example title' , '2017']],
+                ["32.JPG",['example title' , '2017']],
+                ["33.JPG",['example title' , '2017']],
+                ["34.JPG",['example title' , '2017']],
+                ["35.JPG",['example title' , '2017']],
+                ["37.JPG",['example title' , '2017']],
+                ["40.JPG",['example title' , '2017']],
+                ["47.JPG",['example title' , '2017']]
             ]
         },
         "cloth" : {
             "arr" : [
                 "cloth",
-                ["1.JPG","'baby' in rose, johnsons logo, 'doggy' in hebrew"],
-                ["2.JPG","'im gonna kill you ray romano, anime girl 3, 'baby' in rose, johnson's baby, 'doggy' in hebrew, arnold, greek heads"],
-                ["3.JPG","'im gonna kill you ray romano, anime girl 3'"],
-                ["4.JPG","'im gonna kill you ray romano', anime girl 3, 'doggy' in hebrew, arnold, johnsons logo, anime girl 2"],
-                ["5.JPG","crying daisy duck"],
-                ["6.JPG","crying daisy, arnold, anime girl 2"]
+                ["47.JPG",['example title' , '2017']]
             ]
+        },
+        "contact" : {
+            "text" : ""
         }
     }
 
@@ -61,8 +59,8 @@
     $document.ready(function() {
         //PROJECT RENDERER, DO NOT ALTER
 
-        // called when link is clicked 
-        window.render = function(folderPath) { // a key
+        // called when art links clicked
+        window.renderArt = function(folderPath) { // a key
 
             //get general arr of clicked category
             var selectedFolder = window.paths[folderPath].arr;
@@ -77,16 +75,46 @@
                 //add filename
                 var imageHtml = pushPaths(selectedFolder[i][0]);
                 
-                let textString = selectedFolder[i][1];
-                let brokenText = textString.split(',');
-                let textHtml = ''
-                for(x=0; x < brokenText.length; x++) {
-                    textHtml += `<p class="text">${brokenText[x]} </p></br>`;
+                let textArr = selectedFolder[i][1];
+                let title = textArr[0];
+                let year = textArr[1];
+
+                let textHtml = `<h4 class="title">${title} </h4><br><h5 class="year">${year} </h5>`;
+                if(i == 1) {
+                    var markupString = `<div class="pair top">${imageHtml} <div class="textbox">${textHtml} </div> </div>`;
+                } else {
+                    var markupString = `<div class="pair">${imageHtml} <div class="textbox">${textHtml} </div> </div>`;
                 }
-                markup += (`<div class="pair">${imageHtml} <div class="textbox">${textHtml} </div> </div>`);
-                console.log(markup);
+                markup += (markupString);
             }
             $('#content-zone').html(markup); //put the response on the dom
+            // $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
+        }
+
+        // called when text links clicked
+        window.renderText = function(folderPath) { // a key
+
+            // //get general arr of clicked category
+            // var selectedFolder = window.paths[folderPath].arr;
+
+            // // get name
+            // window.stringPath = selectedFolder[0];
+
+            // let markup = ''
+
+            // // iterate through arrays after title, index 0 = filename, 1 = caption string
+            // for (i = 1; i < selectedFolder.length; i++) {
+            //     //add filename
+            //     var imageHtml = pushPaths(selectedFolder[i][0]);
+            //     let textString = selectedFolder[i][1];
+            //     let brokenText = textString.split(',');
+            //     let title = brokenText[0];
+            //     let year = brokenText[1];
+            //     let textHtml = `<p class="textContent"><strong>${title}</strong><br> <i><${year}/i> </p></br>`;
+
+            //     markup += (`<div class="pair">${imageHtml} <div class="textbox">${textHtml} </div> </div>`);
+            // }
+            // $('#content-zone').html(markup); //put the response on the dom
             // $('.text-frame').html(img.toString().split('.')[0]); //put the response on the dom
         }
 
