@@ -110,7 +110,7 @@
         }
 
         window.displayText = function() {
-            $('#content-zone').html('<img class="image top" src="assets/Images/paint/_CV_0019.jpg"/>'); //empty footer area
+            $('#content-zone').html('<img class="image top" src="https://static1.squarespace.com/static/53667a41e4b0e77173cb3dd1/59c7ed2103596e9882d487a6/59c7eea4a803bbff9d2a7dbe/1506275010327/_CV_0019.jpg"/>'); //empty footer area
         }
         
         displayText();
